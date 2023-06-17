@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "a3de45ea-2777-4c3c-aa12-9014bd8ef28f",
+		"name": "PARKEE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4831036",
+		"_collection_link": "https://www.postman.com/4831036/workspace/wahyu-nugroho-indrawinata-mas-wawa-s-public-workspace/collection/4831036-a3de45ea-2777-4c3c-aa12-9014bd8ef28f?action=share&creator=4831036&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "CHECKIN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c11e71c2-0c7c-11ee-be56-0242ac120002",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jenisKendaraan\" :\"MOBIL\",\r\n    \"noPlat\" :\"D1234TB\",\r\n    \"tanggalMasuk\" :\"2021-01-01T23:23:23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checkin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TOTAL",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c11e71c2-0c7c-11ee-be56-0242ac120002",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/total?noPlat=D1234TB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"total"
+					],
+					"query": [
+						{
+							"key": "noPlat",
+							"value": "D1234TB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CHECKOUT",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c11e71c2-0c7c-11ee-be56-0242ac120002",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 51,\r\n    \"noPlat\": \"d1234tb\",\r\n    \"tanggalKeluar\": \"2023-06-16T23:36:29.449+0000\",\r\n    \"totalJam\": 5,\r\n    \"totalPembayaran\": 15000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
